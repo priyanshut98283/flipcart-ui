@@ -1,0 +1,42 @@
+.star-rating {
+    /* display: flex; */
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 1.5em;
+    position: relative;
+    display: inline-block;
+    color: gold;
+    line-height: 0.91;
+  }
+  
+  .star.empty {
+    color: #ddd;
+  }
+  
+  .star.half {
+    position: relative;
+    display: inline-block;
+    width: 0.80em;
+    overflow: hidden;
+    color: #ddd;
+  }
+  
+  .star.half::before {
+    content: '\2605'; /* Unicode character for filled star */
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+  }
+  
+  .star.half::after {
+    content: '\2605'; /* Unicode character for empty star */
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    overflow: hidden;
+    color: #ddd;
+  }
+  
